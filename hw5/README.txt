@@ -1,21 +1,21 @@
-1.�Ǹ� : 400410048
-2.�m�W : ������
-3.email : jokeygeek@gmail.com
-4.�}�o����: �t�W�u�@��
-5.�ާ@���� :
+1.學號 : 400410048
+2.姓名 : 
+3.email : 
+4.開發環境: 系上工作站
+5.操作說明 :
 ------------------------------------------------------
-�Q��operator overloading��{���ƪ��B��
+利用operator overloading實現分數的運算
 
 <makefile>
-	��Jmake => ����hw5������
-	��Jmake clear => �M��hw5������
+	輸入make => 產生hw5執行檔
+	輸入make clear => 清除hw5執行檔
 <Mixed.h>
-	�N1�өҭn�D��class���b���ɮ�(Mixed),�t�~�٦��ۤv�ҩw�q���禡
+	將1個所要求的class打在此檔案(Mixed),另外還有自己所定義的函式
 
 <Mixed.cpp>
-	�NMixed.h�ҩw�q�ŧi���禡���e���b���ɮ�(operator�BToFraction�BEvaluate�BSimplify�B)
+	將Mixed.h所定義宣告的函式內容打在此檔案(operator、ToFraction、Evaluate、Simplify、)
 
 <main.cpp>
-	���ϥΪ̥���Jx�My���ȡA����i�H��ܥ\��A��䰵�ܤơC
+	讓使用者先輸入x和y的值，之後可以選擇功能，對其做變化。
         
 
