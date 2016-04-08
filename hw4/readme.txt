@@ -1,19 +1,19 @@
-1.¾Ç¸¹ : 400410048
-2.©m¦W : ¶ÀÃı¤å
-3.email : jokeygeek@gmail.com
-4.¶}µoÀô¹Ò: ¨t¤W¤u§@¯¸
-5.¾Ş§@»¡©ú :
+1.å­¸è™Ÿ : 400410048
+2.å§“å : é»ƒéŸ»æ–‡
+3.email : 
+4.é–‹ç™¼ç’°å¢ƒ: ç³»ä¸Šå·¥ä½œç«™
+5.æ“ä½œèªªæ˜ :
 ------------------------------------------------------
 <makefile>
-	¿é¤Jmake => ²£¥Íhw4°õ¦æÀÉ
-	¿é¤Jmake clear => ²M°£hw4°õ¦æÀÉ
+	è¼¸å…¥make => ç”¢ç”Ÿhw4åŸ·è¡Œæª”
+	è¼¸å…¥make clear => æ¸…é™¤hw4åŸ·è¡Œæª”
 <hw4.h>
-	±N3­Ó©Ò­n¨Dªºclass¥´¦b¦¹ÀÉ®×(Point,Line,Convexhull),¥t¥~ÁÙ¦³´X­Ó¦Û¤v©Ò©w¸qªº¨ç¦¡
+	å°‡3å€‹æ‰€è¦æ±‚çš„classæ‰“åœ¨æ­¤æª”æ¡ˆ(Point,Line,Convexhull),å¦å¤–é‚„æœ‰å¹¾å€‹è‡ªå·±æ‰€å®šç¾©çš„å‡½å¼
 
 <hw4.cpp>
-	±Nhw4.h©Ò©w¸q«Å§iªº¨ç¦¡¤º®e¥´¦b¦¹ÀÉ®×(Point,FindLine,isOnRight,FindConvexHull_bf,FindConvexHull_jm,FindLowestPoint,ComputeAngle,FindInternalPoint,¤@¨ÇÃB¥~ªºcompare¨ç¦¡)
+	å°‡hw4.hæ‰€å®šç¾©å®£å‘Šçš„å‡½å¼å…§å®¹æ‰“åœ¨æ­¤æª”æ¡ˆ(Point,FindLine,isOnRight,FindConvexHull_bf,FindConvexHull_jm,FindLowestPoint,ComputeAngle,FindInternalPoint,ä¸€äº›é¡å¤–çš„compareå‡½å¼)
 
 <main.cpp>
-	Åı¨Ï¥ÎªÌ¥i¥H¿ï¾Ü­n¨Ï¥Î¼É¤Oªk©Î¬OJavisºtºâªk
-	¦L¥X©Òªáªº®É¶¡(us)¡A±Nµ²ªG¿é¥X¨ìOutput.txt
+	è®“ä½¿ç”¨è€…å¯ä»¥é¸æ“‡è¦ä½¿ç”¨æš´åŠ›æ³•æˆ–æ˜¯Javisæ¼”ç®—æ³•
+	å°å‡ºæ‰€èŠ±çš„æ™‚é–“(us)ï¼Œå°‡çµæœè¼¸å‡ºåˆ°Output.txt
 
