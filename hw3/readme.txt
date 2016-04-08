@@ -1,67 +1,67 @@
-1.�Ǹ� : 400410048
-2.�m�W : ������
-3.email : jokeygeek@gmail.com
-4.�}�o����: �t�W�u�@��(csie0.cs.ccu.edu.tw)
-5.�ާ@���� : �N�{�������T�����A<hw3.h><hw3.cpp><main.cpp>
+1.學號 : 400410048
+2.姓名 : 黃韻文
+3.email : 
+4.開發環境: 系上工作站(csie0.cs.ccu.edu.tw)
+5.操作說明 : 將程式分成三部分，<hw3.h><hw3.cpp><main.cpp>
 ------------------------------------------------------
-�Q��isfinite()���^�ǭ�[true,false]�h�P�_�ײv�O�_�L���j(�ײv���s�b),�Y�b�ײvfunction����return -1�h�|�X��,�]���ײv���i��O��-1,�G�Φ��禡�h���ײv���P�_
+利用isfinite()的回傳值[true,false]去判斷斜率是否無限大(斜率不存在),若在斜率function中用return -1則會出錯,因為斜率有可能是為-1,故用此函式去做斜率的判斷
 <makefile>
 
-	��Jmake => �sĶ.h�ɥH�νsĶ���.cpp�ɥͦ�hw3������
-	��Jmake clear => �M��hw3������
+	輸入make => 編譯.h檔以及編譯兩個.cpp檔生成hw3執行檔
+	輸入make clear => 清除hw3執行檔
 <hw3.h>
-	�N�|�Ӫ���(Line�BLine2�BCircle�BCircle2)�إ߰_�ӡA�ä��O�إߥL�̪��ݩ����O(private�Bpublic)�����ܼƥH�Ψ禡�C
-	�Q��friend�ŧi�����ݩ�class���禡�i�H����class��private�������C
+	將四個物件(Line、Line2、Circle、Circle2)建立起來，並分別建立他們的屬性類別(private、public)中的變數以及函式。
+	利用friend宣告讓不屬於class的函式可以取用class內private的成員。
 
-<hw3.cpp> �Nclass���w�q��function�A��ԲӤ��e���b���ɮסC
+<hw3.cpp> 將class內定義的function，其詳細內容打在此檔案。
 	
-	�C��class������constructor�h�]�ߪ�l��,EX:Line::Line()
-	�C��class�����h�����J���禡�A��KŪ����J�A�M�h�L�X�ڭ̷Q�n����X����
+	每個class都有個constructor去設立初始值,EX:Line::Line()
+	每個class都有多重載入的函式，方便讀取輸入，和去印出我們想要的輸出型式
 	
-	��Line�\��禡²�满��:
-		�Q�Φh�����l�h�L�Xy=ax+b�A�קK��(�ײv���s�B�ײv���s�b�Bb=0�����p)�A�h²�ƦL�X�����l
+	＊Line功能函式簡單說明:
+		利用多重載子去印出y=ax+b，避免掉(斜率為零、斜率不存在、b=0的情況)，去簡化印出的式子
 
 		1.slope: 
-			�^��(y1-y0)/(x1-x0)�A�o��ӽu�ײv�A�Y�ײv���s�b�h�L�X"slope does not exit".
+			回傳(y1-y0)/(x1-x0)，得到該線斜率，若斜率不存在則印出"slope does not exit".
 		2.y_intercept:
-			�^��y0 - (((y1-y0)/(x1-x0))*x0),�o��ӽu��y�I�Z�A�Yy�I�Z���t�ƫh�b��(-1)�ϥL�����ơC
-			�p�G�ײv���s�b�hy�I�Z�]���s�b�A�^��-1�A�L�X"y_intercept does not exit"
+			回傳y0 - (((y1-y0)/(x1-x0))*x0),得到該線的y截距，若y截距為負數則在乘(-1)使他為正數。
+			如果斜率不存在則y截距也不存在，回傳-1，印出"y_intercept does not exit"
 		3.vshift:
-			�ǤJ�ϥΪ̭nshift���ܶq�A�M����y0�My1�[�W���ܶq�C
+			傳入使用者要shift的變量，然後讓y0和y1加上該變量。
 
-	��Line2�\��禡²�满��:
-		�Q�Φh�����l�h�L�Xy=ax+b�A�קK��(�ײv���s�B�ײv���s�b�Bb=0�����p)�A�h²�ƦL�X�����l
-		�]��line2�O�ǤJ�@���I�H�Ψ�Ӥ�V�V�q(dx,dy)�Gline2���ײv�i�H��dy/dx�Ӻ�X
+	＊Line2功能函式簡單說明:
+		利用多重載子去印出y=ax+b，避免掉(斜率為零、斜率不存在、b=0的情況)，去簡化印出的式子
+		因為line2是傳入一個點以及兩個方向向量(dx,dy)故line2的斜率可以用dy/dx來算出
 
 		1.normal:
-			�]�����u�ײv�M�k�u�ײv����(�ۭ���-1)�A�G�k�u�ײv��dx/dy*(-1)�A�Q��isinf()�P�_�ײv�O�_�s�b�A�M��L�X�ӽu
+			因為切線斜率和法線斜率垂直(相乘為-1)，故法線斜率為dx/dy*(-1)，利用isinf()判斷斜率是否存在，然後印出該線
 
-	��Circle�\��禡²�满��
-		�Q�Φh�����l�h�L�X(x-cx)^2+(y-cy)^2=r^2�A�קK��(cx�Mcy�i�ର�s�����p�Mcxcy�i�ର�t�ƪ����p�A)�A�h²�ƦL�X�����l
-		���p�G�ϥΪ̿�J�b�|���t�Ʃιs�h�^��Circle manu		
+	＊Circle功能函式簡單說明
+		利用多重載子去印出(x-cx)^2+(y-cy)^2=r^2，避免掉(cx和cy可能為零的情況和cxcy可能為負數的情況，)，去簡化印出的式子
+		※如果使用者輸入半徑為負數或零則回到Circle manu		
 		1.radius:
-			�^�Ƕꪺ�b�|�C
+			回傳圓的半徑。
 		2.set_center:
-			�ǤJ�ϥΪ̭n���ܪ���ߡA�M�᪽���N�s��x�My����class����cx�Mcy
+			傳入使用者要改變的圓心，然後直接將新的x和y給予class內的cx和cy
 		3.is_inside:
-			�ǤJ�@���I�A�Q�θ��I�M��ߪ��Z���h�M�ꪺ�b�l������A�p�G�Z����b�|�j�h���I���b�ꤺ�A�p�G�Z����b�|�p�ε���b�|�A�h���I�b�ꤺ�A�L�Xyes or no
+			傳入一個點，利用該點和圓心的距離去和圓的半勁做比較，如果距離比半徑大則該點不在圓內，如果距離比半徑小或等於半徑，則該點在圓內，印出yes or no
 
-	��Circle2�\��禡²�满��
-		�Q�Φh�����l�h�L�X(x-cx)^2+(y-cy)^2=r^2�A�קK��(cx�Mcy�i�ର�s�����p�Mcxcy�i�ର�t�ƪ����p�A)�A�h²�ƦL�X�����l
+	＊Circle2功能函式簡單說明
+		利用多重載子去印出(x-cx)^2+(y-cy)^2=r^2，避免掉(cx和cy可能為零的情況和cxcy可能為負數的情況，)，去簡化印出的式子
 
-		�]��Circle2�O��J��Ӧb��W���I(�Y���I�Z�������|)�A�G�������Q�Φ��S�ʺ�X�b�|�M���(���I���I)�A�A�h���MCircle�@�˪��P�_�M��X
+		因為Circle2是輸入兩個在圓上的點(即兩點距離為直徑)，故必須先利用此特性算出半徑和圓心(兩點中點)，再去做和Circle一樣的判斷和輸出
 
 		1.is_inside:
-			�]��Circle2�O��J��Ӧb��W���I(�Y���I�Z�������|)�A�G�������Q�Φ��S�ʺ�X�b�|�M���(���I���I)
-			�ǤJ�@���I�A�Q�θ��I�M��ߪ��Z���h�M�ꪺ�b�l������A�p�G�Z����b�|�j�h���I���b�ꤺ�A�p�G�Z����b�|�p�ε���b�|�A�h���I�b�ꤺ�A�L�Xyes or no
+			因為Circle2是輸入兩個在圓上的點(即兩點距離為直徑)，故必須先利用此特性算出半徑和圓心(兩點中點)
+			傳入一個點，利用該點和圓心的距離去和圓的半勁做比較，如果距離比半徑大則該點不在圓內，如果距離比半徑小或等於半徑，則該點在圓內，印出yes or no
 
 
 
 <main.cpp>
 
-�ϥΪ̤����H�Υ\��P�w���b���ɤ����C
+使用者介面以及功能判定都在此檔內做。
 
-�ھڨϥΪ̿�ܪ����O�A�A�h�߰ݭn�ϥθ����O��إ\��A����back�ﶵ�A���ϥΪ̥i�H�^��D�����A�h��ܨ�L���O�C
+根據使用者選擇的類別，再去詢問要使用該類別何種功能，提供back選項，讓使用者可以回到主介面再去選擇其他類別。
 
 
 
